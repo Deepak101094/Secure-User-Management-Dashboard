@@ -1,10 +1,8 @@
-import React from "react";
-import { render, screen, fireEvent, waitFor } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
 import { Provider } from "react-redux";
 import RegisterPage from "../Register";
 import { BrowserRouter } from "react-router-dom";
 import { store } from "../../redux/store";
-import { signUp } from "../../utils/service";
 
 test("renders RegisterPage component", () => {
 	render(
