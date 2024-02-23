@@ -33,14 +33,13 @@ const LoginPage = () => {
 			navigate("/dashboard");
 		} catch (error: any) {
 			toast.error(error.message);
-			console.error("Error signing in:", error.error);
 		}
 	};
 
 	return (
 		<div className='mt-32 shadow-2xl w-1/2 mx-auto py-6'>
 			<form onSubmit={onSubmitHandler} className='max-w-md mx-auto '>
-				<Heading title='SignIn' center />
+				<Heading title='LogIn' center />
 				<div className='flex flex-col gap-3 mt-8'>
 					<Input
 						name='email'

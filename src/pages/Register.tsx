@@ -32,14 +32,13 @@ const RegisterPage = () => {
 			console.log("Sign Up Response:", response.message);
 		} catch (error: any) {
 			toast.error(error.message);
-			console.error("Error while signUp:", error);
 		}
 	};
 
 	return (
 		<div className='mt-32 shadow-2xl w-1/2 mx-auto py-6'>
 			<form onSubmit={onSubmitHandler} className='max-w-md mx-auto '>
-				<Heading title='SignUp' center />
+				<Heading title='Register' center />
 				<div className='flex flex-col gap-3 mt-8'>
 					<Input
 						name='email'
