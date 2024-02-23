@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
-import Layout from "../components/Layout";
-import Table from "../components/Table";
 import { getUserList } from "../utils/service";
+import { Layout, Table } from "../components";
 
 const User: React.FC = () => {
 	const [userList, setUserList] = useState([]);

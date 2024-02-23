@@ -1,10 +1,10 @@
 import { ChangeEvent, FormEvent, useState } from "react";
-import Input from "../components/Input";
-import Button from "../components/Button";
-import Heading from "../components/Heading";
+
 import { Link, useNavigate } from "react-router-dom";
 import { signUp } from "../utils/service";
 import { toast } from "react-toastify";
+
+import { Heading, Button, Input } from "../components";
 
 const initialData = {
 	email: "",
@@ -29,9 +29,10 @@ const RegisterPage = () => {
 			toast.success("Registration Successfully");
 			setUserData(initialData);
 			navigate("/");
-			console.log("Sign In Response:", response);
+			console.log("Sign Up Response:", response.message);
 		} catch (error: any) {
-			console.error("Error signing in:", error.message);
+			toast.error(error.message);
+			console.error("Error while signUp:", error);
 		}
 	};
 

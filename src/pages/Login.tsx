@@ -1,12 +1,10 @@
 import { ChangeEvent, FormEvent, useState } from "react";
-import Input from "../components/Input";
-import Button from "../components/Button";
-import Heading from "../components/Heading";
 import { Link, useNavigate } from "react-router-dom";
 import { signIn } from "../utils/service";
 import { toast } from "react-toastify";
 import { useDispatch } from "react-redux";
 import { setToken } from "../redux/slices/authSlice";
+import { Heading, Button, Input } from "../components";
 
 const initialData = {
 	email: "",
@@ -28,14 +26,14 @@ const LoginPage = () => {
 		e.preventDefault();
 		try {
 			const response = await signIn(userData);
-			console.log("Sign In Response:", response?.token);
 			dispatch(setToken(response?.token));
 			localStorage.setItem("token", response?.token);
 			toast.success("User logged In");
 			setUserData(initialData);
 			navigate("/dashboard");
 		} catch (error: any) {
-			console.error("Error signing in:", error.message);
+			toast.error(error.message);
+			console.error("Error signing in:", error.error);
 		}
 	};
 

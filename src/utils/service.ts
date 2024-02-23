@@ -43,6 +43,7 @@ export const signIn = async (data: {
 		const response = await api.post<ApiResponse>("/login", data);
 		return handleResponse(response);
 	} catch (error) {
+		// console.log(error, "Error from API");
 		throw handleError(error);
 	}
 };
@@ -55,6 +56,8 @@ export const signUp = async (data: {
 		const response = await api.post<ApiResponse>("/register", data);
 		return handleResponse(response);
 	} catch (error) {
+		console.log(error, "Error from API");
+
 		throw handleError(error);
 	}
 };
