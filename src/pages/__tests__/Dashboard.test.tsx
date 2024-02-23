@@ -16,13 +16,5 @@ describe("Dashboard component", () => {
 				</BrowserRouter>
 			</Provider>
 		);
-
-		// Check if the layout is rendered
-		// const layout = screen.getAllByText("main");
-		// expect(layout).toBeInTheDocument();
-
-		// Check if the "Dashboard" text is present
-		// const dashboardText = screen.getAllByText("Dashboard");
-		// expect(dashboardText).toBeInTheDocument();
 	});
 });

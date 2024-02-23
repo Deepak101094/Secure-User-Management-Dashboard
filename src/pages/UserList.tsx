@@ -13,7 +13,6 @@ const User: React.FC = () => {
 		try {
 			const response = await getUserList();
 			setUserList(response?.data);
-			console.log("User List:", response);
 		} catch (error: any) {
 			console.error("Error fetching user list:", error.message);
 		}

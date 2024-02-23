@@ -29,7 +29,7 @@ const RegisterPage = () => {
 			toast.success("Registration Successfully");
 			setUserData(initialData);
 			navigate("/");
-			console.log("Sign Up Response:", response.message);
+			console.log("Sign Up Response:", response.data);
 		} catch (error: any) {
 			toast.error(error.message);
 		}

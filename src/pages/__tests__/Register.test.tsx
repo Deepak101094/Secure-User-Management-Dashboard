@@ -14,7 +14,7 @@ test("renders RegisterPage component", () => {
 	);
 
 	// Check if the SignUp heading is rendered
-	const signUpHeading = screen.getByText("SignUp");
+	const signUpHeading = screen.getByText("Register");
 	expect(signUpHeading).toBeInTheDocument();
 
 	// Check if the email input is rendered
@@ -36,21 +36,4 @@ test("submits form with valid data", async () => {
 			<RegisterPage />
 		</BrowserRouter>
 	</Provider>;
-
-	// fireEvent.change(screen.getByLabelText("Email"), {
-	// 	target: { value: "eve.holt@reqres.in" },
-	// });
-	// fireEvent.change(screen.getByLabelText("Password"), {
-	// 	target: { value: "password123" },
-	// });
-
-	// // Submit the form
-	// fireEvent.click(screen.getByText("signUp"));
-
-	// Wait for the form submission to be completed
-	// await waitFor(() => {
-	// 	// Check if the success message is displayed
-	// 	const successMessage = screen.getByText("Registration Successfully");
-	// 	expect(successMessage).toBeInTheDocument();
-	// });
 });

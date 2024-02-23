@@ -28,6 +28,10 @@ test("updates email and password on input change", () => {
 		</Provider>
 	);
 
+	// Check if the Login heading is rendered
+	const signUpHeading = screen.getByText("LogIn");
+	expect(signUpHeading).toBeInTheDocument();
+
 	const emailInput = screen.getByLabelText("Email") as HTMLInputElement;
 	const passwordInput = screen.getByLabelText("Password") as HTMLInputElement;
 
@@ -37,5 +41,3 @@ test("updates email and password on input change", () => {
 	expect(emailInput.value).toBe("test@example.com");
 	expect(passwordInput.value).toBe("password123");
 });
-
-// Add more tests as needed based on your component behavior

@@ -1,5 +1,3 @@
-// Table.test.tsx
-
 import { render, screen } from "@testing-library/react";
 import Table from "../Table";
 
@@ -16,7 +14,6 @@ const testData = [
 		last_name: "Ferguson",
 		email: "lindsay.ferguson@reqres.in",
 	},
-	// Add more test data as needed
 ];
 
 test("renders Table component with data", () => {
@@ -38,5 +35,3 @@ test("renders Table component with data", () => {
 		expect(screen.getByText(email)).toBeInTheDocument();
 	});
 });
-
-// You can add more test cases based on your specific requirements.
